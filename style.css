@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+:root{
+/* ### Primary */
+
+--Blue500: hsl(215, 51%, 70%);
+--Cyan400: hsl(178, 100%, 50%);
+
+/* ### Neutral */
+
+--Blue950-mainBG: hsl(217, 54%, 11%);
+--Blue900-cardBG: hsl(216, 50%, 16%);
+--Blue800-line: hsl(215, 32%, 27%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit';
+}
+html{
+    font-size: 18px;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--Blue950-mainBG);
+}
+main{
+    padding: 1rem;
+    margin: 2rem 1rem;
+    background-color: var(--Blue900-cardBG);
+    border-radius: 0.7rem;
+    width: 400px;
+}
+main > *{
+    margin: 1rem 0;
+    color: white;
+}
+#main-img{
+    width: 100%;
+    border-radius: 0.7rem;
+    
+}
+#main-view{
+    position: relative;
+}
+.hover-bg{
+    position:absolute;
+    background-color: rgba(0, 255, 255, 0.395);
+    width: 100%;
+    height: 100%;
+    padding: 5rem;
+    border-radius: 0.76rem;
+    opacity: 0;
+}
+#hover-img{
+    position:absolute;
+    top: 44%;
+    left: 44%;
+    opacity: 0;  
+}
+p{
+    font-weight: 300;
+    color: var(--Blue500);
+    font-size: 300;
+}
+main > div{
+    display: flex;
+    align-items: center;
+}
+#profile img{
+    width: 10%;
+    margin: 0 12px;
+    border: 1px solid white;
+    border-radius: 100px;
+}
+#value img{
+    padding: 2px;
+}
+hr{
+    border: 1px solid var(--Blue800-line);
+}
+#value{
+    justify-content: space-between;
+}
+#value > div{
+    display: flex;
+    gap: 5px;
+}
+.glow-text{
+    color: var(--Cyan400);
+}
+span{
+    color: white;
+}
+span:hover{
+    color: var(--Cyan400);
+    cursor: pointer;
+}
+h1:hover{
+    cursor: pointer;
+    color:var(--Cyan400);
+}
+
+#main-view:hover .hover-bg,#main-view:hover .hover-img{
+    cursor: pointer;
+    opacity: 0.5;
+}
+#main-view:hover #hover-img {
+  opacity: 1; 
+}
